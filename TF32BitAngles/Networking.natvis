@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AutoVisualizer xmlns="http://schemas.microsoft.com/vstudio/debugger/natvis/2010">
+	<Type Name="SendTable">
+		<DisplayString>{m_pNetTableName,sb}, {m_nProps} props</DisplayString>
+		<Expand>
+			<ArrayItems>
+				<Size>m_nProps</Size>
+				<ValuePointer>m_pProps</ValuePointer>
+			</ArrayItems>
+		</Expand>
+	</Type>
+	<Type Name="SendProp">
+		<DisplayString>{m_pVarName,sb} ({m_nBits})</DisplayString>
+
+		<Expand>
+			<Item Condition="m_Type == DPT_DataTable" Name="[datatable]">m_pDataTable</Item>
+		</Expand>
+	</Type>
+</AutoVisualizer>

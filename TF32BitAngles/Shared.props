@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <IncludePath>$(SolutionDir)sdk2013\mp\src\public;$(SolutionDir)sdk2013\mp\src\public\tier0;$(SolutionDir)sdk2013\mp\src\public\tier1;$(SolutionDir)sdk2013\mp\src\common;$(SolutionDir)sdk2013\mp\src\game;$(SolutionDir)sdk2013\mp\src\game\shared;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <Link>
+      <AdditionalDependencies>legacy_stdio_definitions.lib;$(SolutionDir)sdk2013\mp\src\lib\public\tier0.lib;$(SolutionDir)sdk2013\mp\src\lib\public\tier1.lib;$(SolutionDir)sdk2013\mp\src\lib\public\tier2.lib;$(SolutionDir)sdk2013\mp\src\lib\public\tier3.lib;$(SolutionDir)sdk2013\mp\src\lib\public\steam_api.lib;$(SolutionDir)sdk2013\mp\src\lib\public\vstdlib.lib;$(SolutionDir)sdk2013\mp\src\lib\public\mathlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>GAME_DLL;TF_DLL;WIN32;TF2_SDK;NO_PCH;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup />
+</Project>
